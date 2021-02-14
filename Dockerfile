@@ -1,5 +1,5 @@
 # base image
-FROM jenkins/jenkins:2.249.1-lts-jdk11
+FROM jenkins/jenkins:lts-jdk11
 
 USER root 
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 docker container run \
 	--name jenkins-lts-jdk11 \
 	--rm \
