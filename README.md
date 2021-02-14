@@ -1,5 +1,5 @@
 # jenkins-java-8-11-docker
-Dockerfile to create a Jenkins CI image with Java 8 and Java 11 support. 
+Dockerfile to create a Jenkins CI image with Java 8 and Java 11 support incl. installed docker-ce inside the Jenkins container to allow for docker container execution within Jenkins. 
 
 ## Additional configuration
 Depending on your firewall settings and if you want to use docker container inside your jenkins pipeline                             
