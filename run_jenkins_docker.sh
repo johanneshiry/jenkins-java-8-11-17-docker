@@ -2,7 +2,6 @@
 
 docker container run \
 	--name jenkins-lts-jdk11 \
-	--rm \
 	--detach \
 	-v jenkins-data:/var/jenkins_home \
 	-v jenkins-docker-certs:/certs/client:ro \
