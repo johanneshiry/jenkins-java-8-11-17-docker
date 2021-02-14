@@ -1,5 +1,6 @@
 version: '3'
-  services:
+services:
+
     jenkins:
       build: .
       container_name: jenkins-jdk8-jdk11
@@ -12,3 +13,6 @@ version: '3'
         - /var/run/docker.sock:/var/run/docker.sock # required to run docker containers (e.g. testcontainers) inside jenkins
       command:
         --prefix=/ci # required to run ci in subfolder with nginx proxy 
+volumes:
+  jenkins-data:
+  jenkins-docker-certs:
