@@ -4,6 +4,7 @@ services:
     jenkins:
       build: .
       container_name: jenkins-jdk8-jdk11
+      network_mode: bridge
       restart: always
       ports: 
         - '8085:8080'
