@@ -2,7 +2,7 @@ version: '3'
 services:
 
     jenkins:
-      build: .
+      build: ./.docker/
       container_name: jenkins-jdk8-jdk11
       network_mode: bridge
       restart: always
