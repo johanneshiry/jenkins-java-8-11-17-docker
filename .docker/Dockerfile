@@ -11,6 +11,7 @@ RUN apt-get update && \
       gnupg2 \
       software-properties-common \
       xvfb \
+      graphviz \
       openjfx && \
     # add docker and openjdk8 repo (debian buster comes w/o openjdk8)
     curl -L https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && \
