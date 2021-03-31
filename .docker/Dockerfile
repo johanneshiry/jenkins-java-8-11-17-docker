@@ -11,8 +11,20 @@ RUN apt-get update && \
       gnupg2 \
       software-properties-common \
       xvfb \
-      graphviz \
-      openjfx && \
+      linux-headers-amd64 \
+      openjfx \ 
+      cmake \
+      g++ \
+      openssl \
+      python3-dev \
+      gfortran \
+      build-essential \
+      perl && \
+     # compile and add eccodes
+    curl https://confluence.ecmwf.int/download/attachments/45757960/eccodes-2.21.0-Source.tar.gz --output eccodes.tar.gz && \
+    tar -zxvf eccodes.tar.gz && \
+    cd eccodes-2.21.0-Source && \
+    mkdir build && cd build && cmake .. && make && ctest && make install && \
     # add docker and openjdk8 repo (debian buster comes w/o openjdk8)
     curl -L https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && \
 	add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && \
