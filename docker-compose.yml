@@ -2,15 +2,15 @@ version: '3'
 services:
 
     jenkins:
-      build: .
+      build: ./.docker/
       container_name: jenkins-jdk8-jdk11
       network_mode: bridge
       restart: always
       ports: 
-        - '8085:8080'
+        - '127.0.0.1:8085:8080'
       volumes:
         - ./volumes/jenkins-data:/var/jenkins_home
         - ./volumes/jenkins-certs:/certs/client:ro
         - /var/run/docker.sock:/var/run/docker.sock # required to run docker containers (e.g. testcontainers) inside jenkins
       command:
-        --prefix=/ci # required to run ci in subfolder with nginx proxy
+        --prefix=/ci # required to run ci in subfolder with nginx proxy 
