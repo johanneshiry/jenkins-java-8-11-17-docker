@@ -3,7 +3,7 @@ services:
 
     jenkins:
       build: ./.docker/
-      container_name: jenkins-jdk8-jdk11
+      container_name: jenkins-jdk8-jdk11-jdk-17
       network_mode: bridge
       restart: always
       ports: 
